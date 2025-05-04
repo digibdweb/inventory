@@ -1,6 +1,6 @@
 // app/page.tsx
 import { getConnection } from '@/app/lib/db';
-
+import {SearchBar} from '@/app/actions/SearchBar';
 export default async function HomePage() {
   const pool = await getConnection();
   const result = await pool.request().query('SELECT TOP 10 * FROM equipment');
@@ -17,10 +17,17 @@ export default async function HomePage() {
           value={numberOfCustomers}
           type="customers"
         /> */}
+        
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         {/* <RevenueChart revenue={revenue}  /> */}
         {/* <LatestInvoices latestInvoices={latestInvoices} /> */}
+        <h1>h1</h1>
+        <h1>h1</h1>
+        <h1>h1</h1>
+        <div><SearchBar /></div>
+        
+
       </div>
     </div>
   );
