@@ -1,3 +1,4 @@
+'use server'
 import {prisma} from '@/app/lib/prisma';
 
 export async function searchRecord(formData:FormData){
@@ -5,11 +6,11 @@ export async function searchRecord(formData:FormData){
 
     if(!input) return[]
 
-    const records = await prisma.record.findMany({
+    const records = await prisma.equipment.findMany({
         where:{
-            name:{
+            barcode:{
                 contains: input,
-                mode: 'insensitive',
+                //mode: 'insensitive',
             },
         },
     })

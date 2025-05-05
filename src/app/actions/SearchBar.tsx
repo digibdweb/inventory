@@ -4,13 +4,13 @@ import { useState } from "react"
 import { searchRecord } from "./searchRecord" 
 
 
-const SearchBar = () => {
+export  const SearchBar = () => {
     const [query, setQuery] =useState('')
     const [results, setResults] = useState<any[]>([])
 
     const handleSearch = async() =>{
         const formData = new FormData()
-        formData.append('query',query)
+        formData.append('query', query)
         const res = await searchRecord(formData)
         setResults(res)
     }
@@ -24,6 +24,14 @@ const SearchBar = () => {
         className="border p-2 mr-2" 
         />
         <button onClick={handleSearch} className="bg-blue-500 text-white px-4 py-2">Search</button> 
+
+        <ul className='mt-4'>
+          {results.map((equipment) => (
+            <li key={equipment.sl} className='border-b py-2'>
+              {equipment.name}          {equipment.barcode}
+            </li>
+          ))}
+        </ul>
     </div>
   )
 }

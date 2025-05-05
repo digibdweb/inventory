@@ -17,15 +17,14 @@ export default async function HomePage() {
           value={numberOfCustomers}
           type="customers"
         /> */}
+          <div><SearchBar /></div>
         
       </div>
       <div className="mt-6 grid grid-cols-1 gap-6 md:grid-cols-4 lg:grid-cols-8">
         {/* <RevenueChart revenue={revenue}  /> */}
         {/* <LatestInvoices latestInvoices={latestInvoices} /> */}
-        <h1>h1</h1>
-        <h1>h1</h1>
-        <h1>h1</h1>
-        <div><SearchBar /></div>
+      
+      
         
 
       </div>

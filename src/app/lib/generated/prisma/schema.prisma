@@ -31,7 +31,7 @@ model Device_RAW_File {
 
 model equipment {
   sl       Int     @id(map: "PK__equipmen__3214186AFDC739FF") @default(autoincrement())
-  name     String?  @db.NVarChar(100)
+  name     String? @db.NVarChar(100)
   category String? @db.NVarChar(100)
   barcode  String? @unique(map: "UQ__equipmen__C16E36F8E848ED1B") @db.NVarChar(50)
   location String? @db.NVarChar(100)

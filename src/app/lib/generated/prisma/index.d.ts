@@ -14,10 +14,10 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model Record
+ * Model equipment
  * 
  */
-export type Record = $Result.DefaultSelection<Prisma.$RecordPayload>
+export type equipment = $Result.DefaultSelection<Prisma.$equipmentPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -26,8 +26,8 @@ export type Record = $Result.DefaultSelection<Prisma.$RecordPayload>
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Records
- * const records = await prisma.record.findMany()
+ * // Fetch zero or more Equipment
+ * const equipment = await prisma.equipment.findMany()
  * ```
  *
  *
@@ -47,8 +47,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Records
-   * const records = await prisma.record.findMany()
+   * // Fetch zero or more Equipment
+   * const equipment = await prisma.equipment.findMany()
    * ```
    *
    *
@@ -145,14 +145,14 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.record`: Exposes CRUD operations for the **Record** model.
+   * `prisma.equipment`: Exposes CRUD operations for the **equipment** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Records
-    * const records = await prisma.record.findMany()
+    * // Fetch zero or more Equipment
+    * const equipment = await prisma.equipment.findMany()
     * ```
     */
-  get record(): Prisma.RecordDelegate<ExtArgs, ClientOptions>;
+  get equipment(): Prisma.equipmentDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -593,7 +593,7 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    Record: 'Record'
+    equipment: 'equipment'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -612,73 +612,73 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "record"
+      modelProps: "equipment"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      Record: {
-        payload: Prisma.$RecordPayload<ExtArgs>
-        fields: Prisma.RecordFieldRefs
+      equipment: {
+        payload: Prisma.$equipmentPayload<ExtArgs>
+        fields: Prisma.equipmentFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.RecordFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload> | null
+            args: Prisma.equipmentFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.RecordFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>
+            args: Prisma.equipmentFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>
           }
           findFirst: {
-            args: Prisma.RecordFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload> | null
+            args: Prisma.equipmentFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.RecordFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>
+            args: Prisma.equipmentFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>
           }
           findMany: {
-            args: Prisma.RecordFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>[]
+            args: Prisma.equipmentFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>[]
           }
           create: {
-            args: Prisma.RecordCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>
+            args: Prisma.equipmentCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>
           }
           createMany: {
-            args: Prisma.RecordCreateManyArgs<ExtArgs>
+            args: Prisma.equipmentCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           delete: {
-            args: Prisma.RecordDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>
+            args: Prisma.equipmentDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>
           }
           update: {
-            args: Prisma.RecordUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>
+            args: Prisma.equipmentUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>
           }
           deleteMany: {
-            args: Prisma.RecordDeleteManyArgs<ExtArgs>
+            args: Prisma.equipmentDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.RecordUpdateManyArgs<ExtArgs>
+            args: Prisma.equipmentUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           upsert: {
-            args: Prisma.RecordUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$RecordPayload>
+            args: Prisma.equipmentUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$equipmentPayload>
           }
           aggregate: {
-            args: Prisma.RecordAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateRecord>
+            args: Prisma.EquipmentAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateEquipment>
           }
           groupBy: {
-            args: Prisma.RecordGroupByArgs<ExtArgs>
-            result: $Utils.Optional<RecordGroupByOutputType>[]
+            args: Prisma.equipmentGroupByArgs<ExtArgs>
+            result: $Utils.Optional<EquipmentGroupByOutputType>[]
           }
           count: {
-            args: Prisma.RecordCountArgs<ExtArgs>
-            result: $Utils.Optional<RecordCountAggregateOutputType> | number
+            args: Prisma.equipmentCountArgs<ExtArgs>
+            result: $Utils.Optional<EquipmentCountAggregateOutputType> | number
           }
         }
       }
@@ -766,7 +766,7 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    record?: RecordOmit
+    equipment?: equipmentOmit
   }
 
   /* Types for Logging */
@@ -862,333 +862,363 @@ export namespace Prisma {
    */
 
   /**
-   * Model Record
+   * Model equipment
    */
 
-  export type AggregateRecord = {
-    _count: RecordCountAggregateOutputType | null
-    _avg: RecordAvgAggregateOutputType | null
-    _sum: RecordSumAggregateOutputType | null
-    _min: RecordMinAggregateOutputType | null
-    _max: RecordMaxAggregateOutputType | null
+  export type AggregateEquipment = {
+    _count: EquipmentCountAggregateOutputType | null
+    _avg: EquipmentAvgAggregateOutputType | null
+    _sum: EquipmentSumAggregateOutputType | null
+    _min: EquipmentMinAggregateOutputType | null
+    _max: EquipmentMaxAggregateOutputType | null
   }
 
-  export type RecordAvgAggregateOutputType = {
-    id: number | null
+  export type EquipmentAvgAggregateOutputType = {
+    sl: number | null
   }
 
-  export type RecordSumAggregateOutputType = {
-    id: number | null
+  export type EquipmentSumAggregateOutputType = {
+    sl: number | null
   }
 
-  export type RecordMinAggregateOutputType = {
-    id: number | null
+  export type EquipmentMinAggregateOutputType = {
+    sl: number | null
     name: string | null
+    category: string | null
+    barcode: string | null
+    location: string | null
   }
 
-  export type RecordMaxAggregateOutputType = {
-    id: number | null
+  export type EquipmentMaxAggregateOutputType = {
+    sl: number | null
     name: string | null
+    category: string | null
+    barcode: string | null
+    location: string | null
   }
 
-  export type RecordCountAggregateOutputType = {
-    id: number
+  export type EquipmentCountAggregateOutputType = {
+    sl: number
     name: number
+    category: number
+    barcode: number
+    location: number
     _all: number
   }
 
 
-  export type RecordAvgAggregateInputType = {
-    id?: true
+  export type EquipmentAvgAggregateInputType = {
+    sl?: true
   }
 
-  export type RecordSumAggregateInputType = {
-    id?: true
+  export type EquipmentSumAggregateInputType = {
+    sl?: true
   }
 
-  export type RecordMinAggregateInputType = {
-    id?: true
+  export type EquipmentMinAggregateInputType = {
+    sl?: true
     name?: true
+    category?: true
+    barcode?: true
+    location?: true
   }
 
-  export type RecordMaxAggregateInputType = {
-    id?: true
+  export type EquipmentMaxAggregateInputType = {
+    sl?: true
     name?: true
+    category?: true
+    barcode?: true
+    location?: true
   }
 
-  export type RecordCountAggregateInputType = {
-    id?: true
+  export type EquipmentCountAggregateInputType = {
+    sl?: true
     name?: true
+    category?: true
+    barcode?: true
+    location?: true
     _all?: true
   }
 
-  export type RecordAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type EquipmentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Record to aggregate.
+     * Filter which equipment to aggregate.
      */
-    where?: RecordWhereInput
+    where?: equipmentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Records to fetch.
+     * Determine the order of equipment to fetch.
      */
-    orderBy?: RecordOrderByWithRelationInput | RecordOrderByWithRelationInput[]
+    orderBy?: equipmentOrderByWithRelationInput | equipmentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: RecordWhereUniqueInput
+    cursor?: equipmentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Records from the position of the cursor.
+     * Take `±n` equipment from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Records.
+     * Skip the first `n` equipment.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Records
+     * Count returned equipment
     **/
-    _count?: true | RecordCountAggregateInputType
+    _count?: true | EquipmentCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: RecordAvgAggregateInputType
+    _avg?: EquipmentAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: RecordSumAggregateInputType
+    _sum?: EquipmentSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: RecordMinAggregateInputType
+    _min?: EquipmentMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: RecordMaxAggregateInputType
+    _max?: EquipmentMaxAggregateInputType
   }
 
-  export type GetRecordAggregateType<T extends RecordAggregateArgs> = {
-        [P in keyof T & keyof AggregateRecord]: P extends '_count' | 'count'
+  export type GetEquipmentAggregateType<T extends EquipmentAggregateArgs> = {
+        [P in keyof T & keyof AggregateEquipment]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateRecord[P]>
-      : GetScalarType<T[P], AggregateRecord[P]>
+        : GetScalarType<T[P], AggregateEquipment[P]>
+      : GetScalarType<T[P], AggregateEquipment[P]>
   }
 
 
 
 
-  export type RecordGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: RecordWhereInput
-    orderBy?: RecordOrderByWithAggregationInput | RecordOrderByWithAggregationInput[]
-    by: RecordScalarFieldEnum[] | RecordScalarFieldEnum
-    having?: RecordScalarWhereWithAggregatesInput
+  export type equipmentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: equipmentWhereInput
+    orderBy?: equipmentOrderByWithAggregationInput | equipmentOrderByWithAggregationInput[]
+    by: EquipmentScalarFieldEnum[] | EquipmentScalarFieldEnum
+    having?: equipmentScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: RecordCountAggregateInputType | true
-    _avg?: RecordAvgAggregateInputType
-    _sum?: RecordSumAggregateInputType
-    _min?: RecordMinAggregateInputType
-    _max?: RecordMaxAggregateInputType
+    _count?: EquipmentCountAggregateInputType | true
+    _avg?: EquipmentAvgAggregateInputType
+    _sum?: EquipmentSumAggregateInputType
+    _min?: EquipmentMinAggregateInputType
+    _max?: EquipmentMaxAggregateInputType
   }
 
-  export type RecordGroupByOutputType = {
-    id: number
-    name: string
-    _count: RecordCountAggregateOutputType | null
-    _avg: RecordAvgAggregateOutputType | null
-    _sum: RecordSumAggregateOutputType | null
-    _min: RecordMinAggregateOutputType | null
-    _max: RecordMaxAggregateOutputType | null
+  export type EquipmentGroupByOutputType = {
+    sl: number
+    name: string | null
+    category: string | null
+    barcode: string | null
+    location: string | null
+    _count: EquipmentCountAggregateOutputType | null
+    _avg: EquipmentAvgAggregateOutputType | null
+    _sum: EquipmentSumAggregateOutputType | null
+    _min: EquipmentMinAggregateOutputType | null
+    _max: EquipmentMaxAggregateOutputType | null
   }
 
-  type GetRecordGroupByPayload<T extends RecordGroupByArgs> = Prisma.PrismaPromise<
+  type GetEquipmentGroupByPayload<T extends equipmentGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<RecordGroupByOutputType, T['by']> &
+      PickEnumerable<EquipmentGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof RecordGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof EquipmentGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], RecordGroupByOutputType[P]>
-            : GetScalarType<T[P], RecordGroupByOutputType[P]>
+              : GetScalarType<T[P], EquipmentGroupByOutputType[P]>
+            : GetScalarType<T[P], EquipmentGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type RecordSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
-    id?: boolean
+  export type equipmentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+    sl?: boolean
     name?: boolean
-  }, ExtArgs["result"]["record"]>
+    category?: boolean
+    barcode?: boolean
+    location?: boolean
+  }, ExtArgs["result"]["equipment"]>
 
 
 
-  export type RecordSelectScalar = {
-    id?: boolean
+  export type equipmentSelectScalar = {
+    sl?: boolean
     name?: boolean
+    category?: boolean
+    barcode?: boolean
+    location?: boolean
   }
 
-  export type RecordOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "name", ExtArgs["result"]["record"]>
+  export type equipmentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"sl" | "name" | "category" | "barcode" | "location", ExtArgs["result"]["equipment"]>
 
-  export type $RecordPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Record"
+  export type $equipmentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "equipment"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
-      id: number
-      name: string
-    }, ExtArgs["result"]["record"]>
+      sl: number
+      name: string | null
+      category: string | null
+      barcode: string | null
+      location: string | null
+    }, ExtArgs["result"]["equipment"]>
     composites: {}
   }
 
-  type RecordGetPayload<S extends boolean | null | undefined | RecordDefaultArgs> = $Result.GetResult<Prisma.$RecordPayload, S>
+  type equipmentGetPayload<S extends boolean | null | undefined | equipmentDefaultArgs> = $Result.GetResult<Prisma.$equipmentPayload, S>
 
-  type RecordCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<RecordFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: RecordCountAggregateInputType | true
+  type equipmentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<equipmentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: EquipmentCountAggregateInputType | true
     }
 
-  export interface RecordDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Record'], meta: { name: 'Record' } }
+  export interface equipmentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['equipment'], meta: { name: 'equipment' } }
     /**
-     * Find zero or one Record that matches the filter.
-     * @param {RecordFindUniqueArgs} args - Arguments to find a Record
+     * Find zero or one Equipment that matches the filter.
+     * @param {equipmentFindUniqueArgs} args - Arguments to find a Equipment
      * @example
-     * // Get one Record
-     * const record = await prisma.record.findUnique({
+     * // Get one Equipment
+     * const equipment = await prisma.equipment.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends RecordFindUniqueArgs>(args: SelectSubset<T, RecordFindUniqueArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends equipmentFindUniqueArgs>(args: SelectSubset<T, equipmentFindUniqueArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Record that matches the filter or throw an error with `error.code='P2025'`
+     * Find one Equipment that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {RecordFindUniqueOrThrowArgs} args - Arguments to find a Record
+     * @param {equipmentFindUniqueOrThrowArgs} args - Arguments to find a Equipment
      * @example
-     * // Get one Record
-     * const record = await prisma.record.findUniqueOrThrow({
+     * // Get one Equipment
+     * const equipment = await prisma.equipment.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends RecordFindUniqueOrThrowArgs>(args: SelectSubset<T, RecordFindUniqueOrThrowArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends equipmentFindUniqueOrThrowArgs>(args: SelectSubset<T, equipmentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Record that matches the filter.
+     * Find the first Equipment that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordFindFirstArgs} args - Arguments to find a Record
+     * @param {equipmentFindFirstArgs} args - Arguments to find a Equipment
      * @example
-     * // Get one Record
-     * const record = await prisma.record.findFirst({
+     * // Get one Equipment
+     * const equipment = await prisma.equipment.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends RecordFindFirstArgs>(args?: SelectSubset<T, RecordFindFirstArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends equipmentFindFirstArgs>(args?: SelectSubset<T, equipmentFindFirstArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Record that matches the filter or
+     * Find the first Equipment that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordFindFirstOrThrowArgs} args - Arguments to find a Record
+     * @param {equipmentFindFirstOrThrowArgs} args - Arguments to find a Equipment
      * @example
-     * // Get one Record
-     * const record = await prisma.record.findFirstOrThrow({
+     * // Get one Equipment
+     * const equipment = await prisma.equipment.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends RecordFindFirstOrThrowArgs>(args?: SelectSubset<T, RecordFindFirstOrThrowArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends equipmentFindFirstOrThrowArgs>(args?: SelectSubset<T, equipmentFindFirstOrThrowArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Records that matches the filter.
+     * Find zero or more Equipment that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {equipmentFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Records
-     * const records = await prisma.record.findMany()
+     * // Get all Equipment
+     * const equipment = await prisma.equipment.findMany()
      * 
-     * // Get first 10 Records
-     * const records = await prisma.record.findMany({ take: 10 })
+     * // Get first 10 Equipment
+     * const equipment = await prisma.equipment.findMany({ take: 10 })
      * 
-     * // Only select the `id`
-     * const recordWithIdOnly = await prisma.record.findMany({ select: { id: true } })
+     * // Only select the `sl`
+     * const equipmentWithSlOnly = await prisma.equipment.findMany({ select: { sl: true } })
      * 
      */
-    findMany<T extends RecordFindManyArgs>(args?: SelectSubset<T, RecordFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends equipmentFindManyArgs>(args?: SelectSubset<T, equipmentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Record.
-     * @param {RecordCreateArgs} args - Arguments to create a Record.
+     * Create a Equipment.
+     * @param {equipmentCreateArgs} args - Arguments to create a Equipment.
      * @example
-     * // Create one Record
-     * const Record = await prisma.record.create({
+     * // Create one Equipment
+     * const Equipment = await prisma.equipment.create({
      *   data: {
-     *     // ... data to create a Record
+     *     // ... data to create a Equipment
      *   }
      * })
      * 
      */
-    create<T extends RecordCreateArgs>(args: SelectSubset<T, RecordCreateArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends equipmentCreateArgs>(args: SelectSubset<T, equipmentCreateArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Records.
-     * @param {RecordCreateManyArgs} args - Arguments to create many Records.
+     * Create many Equipment.
+     * @param {equipmentCreateManyArgs} args - Arguments to create many Equipment.
      * @example
-     * // Create many Records
-     * const record = await prisma.record.createMany({
+     * // Create many Equipment
+     * const equipment = await prisma.equipment.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends RecordCreateManyArgs>(args?: SelectSubset<T, RecordCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends equipmentCreateManyArgs>(args?: SelectSubset<T, equipmentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Delete a Record.
-     * @param {RecordDeleteArgs} args - Arguments to delete one Record.
+     * Delete a Equipment.
+     * @param {equipmentDeleteArgs} args - Arguments to delete one Equipment.
      * @example
-     * // Delete one Record
-     * const Record = await prisma.record.delete({
+     * // Delete one Equipment
+     * const Equipment = await prisma.equipment.delete({
      *   where: {
-     *     // ... filter to delete one Record
+     *     // ... filter to delete one Equipment
      *   }
      * })
      * 
      */
-    delete<T extends RecordDeleteArgs>(args: SelectSubset<T, RecordDeleteArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends equipmentDeleteArgs>(args: SelectSubset<T, equipmentDeleteArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Record.
-     * @param {RecordUpdateArgs} args - Arguments to update one Record.
+     * Update one Equipment.
+     * @param {equipmentUpdateArgs} args - Arguments to update one Equipment.
      * @example
-     * // Update one Record
-     * const record = await prisma.record.update({
+     * // Update one Equipment
+     * const equipment = await prisma.equipment.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1198,30 +1228,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends RecordUpdateArgs>(args: SelectSubset<T, RecordUpdateArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends equipmentUpdateArgs>(args: SelectSubset<T, equipmentUpdateArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Records.
-     * @param {RecordDeleteManyArgs} args - Arguments to filter Records to delete.
+     * Delete zero or more Equipment.
+     * @param {equipmentDeleteManyArgs} args - Arguments to filter Equipment to delete.
      * @example
-     * // Delete a few Records
-     * const { count } = await prisma.record.deleteMany({
+     * // Delete a few Equipment
+     * const { count } = await prisma.equipment.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends RecordDeleteManyArgs>(args?: SelectSubset<T, RecordDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends equipmentDeleteManyArgs>(args?: SelectSubset<T, equipmentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Records.
+     * Update zero or more Equipment.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {equipmentUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Records
-     * const record = await prisma.record.updateMany({
+     * // Update many Equipment
+     * const equipment = await prisma.equipment.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1231,56 +1261,56 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends RecordUpdateManyArgs>(args: SelectSubset<T, RecordUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends equipmentUpdateManyArgs>(args: SelectSubset<T, equipmentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create or update one Record.
-     * @param {RecordUpsertArgs} args - Arguments to update or create a Record.
+     * Create or update one Equipment.
+     * @param {equipmentUpsertArgs} args - Arguments to update or create a Equipment.
      * @example
-     * // Update or create a Record
-     * const record = await prisma.record.upsert({
+     * // Update or create a Equipment
+     * const equipment = await prisma.equipment.upsert({
      *   create: {
-     *     // ... data to create a Record
+     *     // ... data to create a Equipment
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Record we want to update
+     *     // ... the filter for the Equipment we want to update
      *   }
      * })
      */
-    upsert<T extends RecordUpsertArgs>(args: SelectSubset<T, RecordUpsertArgs<ExtArgs>>): Prisma__RecordClient<$Result.GetResult<Prisma.$RecordPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends equipmentUpsertArgs>(args: SelectSubset<T, equipmentUpsertArgs<ExtArgs>>): Prisma__equipmentClient<$Result.GetResult<Prisma.$equipmentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Records.
+     * Count the number of Equipment.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordCountArgs} args - Arguments to filter Records to count.
+     * @param {equipmentCountArgs} args - Arguments to filter Equipment to count.
      * @example
-     * // Count the number of Records
-     * const count = await prisma.record.count({
+     * // Count the number of Equipment
+     * const count = await prisma.equipment.count({
      *   where: {
-     *     // ... the filter for the Records we want to count
+     *     // ... the filter for the Equipment we want to count
      *   }
      * })
     **/
-    count<T extends RecordCountArgs>(
-      args?: Subset<T, RecordCountArgs>,
+    count<T extends equipmentCountArgs>(
+      args?: Subset<T, equipmentCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], RecordCountAggregateOutputType>
+          : GetScalarType<T['select'], EquipmentCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Record.
+     * Allows you to perform aggregations operations on a Equipment.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {EquipmentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1300,13 +1330,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends RecordAggregateArgs>(args: Subset<T, RecordAggregateArgs>): Prisma.PrismaPromise<GetRecordAggregateType<T>>
+    aggregate<T extends EquipmentAggregateArgs>(args: Subset<T, EquipmentAggregateArgs>): Prisma.PrismaPromise<GetEquipmentAggregateType<T>>
 
     /**
-     * Group by Record.
+     * Group by Equipment.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {RecordGroupByArgs} args - Group by arguments.
+     * @param {equipmentGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1321,14 +1351,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends RecordGroupByArgs,
+      T extends equipmentGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: RecordGroupByArgs['orderBy'] }
-        : { orderBy?: RecordGroupByArgs['orderBy'] },
+        ? { orderBy: equipmentGroupByArgs['orderBy'] }
+        : { orderBy?: equipmentGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1377,20 +1407,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, RecordGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetRecordGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, equipmentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetEquipmentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Record model
+   * Fields of the equipment model
    */
-  readonly fields: RecordFieldRefs;
+  readonly fields: equipmentFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Record.
+   * The delegate class that acts as a "Promise-like" for equipment.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__RecordClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__equipmentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -1418,328 +1448,331 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Record model
+   * Fields of the equipment model
    */
-  interface RecordFieldRefs {
-    readonly id: FieldRef<"Record", 'Int'>
-    readonly name: FieldRef<"Record", 'String'>
+  interface equipmentFieldRefs {
+    readonly sl: FieldRef<"equipment", 'Int'>
+    readonly name: FieldRef<"equipment", 'String'>
+    readonly category: FieldRef<"equipment", 'String'>
+    readonly barcode: FieldRef<"equipment", 'String'>
+    readonly location: FieldRef<"equipment", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Record findUnique
+   * equipment findUnique
    */
-  export type RecordFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * Filter, which Record to fetch.
+     * Filter, which equipment to fetch.
      */
-    where: RecordWhereUniqueInput
+    where: equipmentWhereUniqueInput
   }
 
   /**
-   * Record findUniqueOrThrow
+   * equipment findUniqueOrThrow
    */
-  export type RecordFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * Filter, which Record to fetch.
+     * Filter, which equipment to fetch.
      */
-    where: RecordWhereUniqueInput
+    where: equipmentWhereUniqueInput
   }
 
   /**
-   * Record findFirst
+   * equipment findFirst
    */
-  export type RecordFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * Filter, which Record to fetch.
+     * Filter, which equipment to fetch.
      */
-    where?: RecordWhereInput
+    where?: equipmentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Records to fetch.
+     * Determine the order of equipment to fetch.
      */
-    orderBy?: RecordOrderByWithRelationInput | RecordOrderByWithRelationInput[]
+    orderBy?: equipmentOrderByWithRelationInput | equipmentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Records.
+     * Sets the position for searching for equipment.
      */
-    cursor?: RecordWhereUniqueInput
+    cursor?: equipmentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Records from the position of the cursor.
+     * Take `±n` equipment from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Records.
+     * Skip the first `n` equipment.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Records.
+     * Filter by unique combinations of equipment.
      */
-    distinct?: RecordScalarFieldEnum | RecordScalarFieldEnum[]
+    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
   }
 
   /**
-   * Record findFirstOrThrow
+   * equipment findFirstOrThrow
    */
-  export type RecordFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * Filter, which Record to fetch.
+     * Filter, which equipment to fetch.
      */
-    where?: RecordWhereInput
+    where?: equipmentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Records to fetch.
+     * Determine the order of equipment to fetch.
      */
-    orderBy?: RecordOrderByWithRelationInput | RecordOrderByWithRelationInput[]
+    orderBy?: equipmentOrderByWithRelationInput | equipmentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Records.
+     * Sets the position for searching for equipment.
      */
-    cursor?: RecordWhereUniqueInput
+    cursor?: equipmentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Records from the position of the cursor.
+     * Take `±n` equipment from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Records.
+     * Skip the first `n` equipment.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Records.
+     * Filter by unique combinations of equipment.
      */
-    distinct?: RecordScalarFieldEnum | RecordScalarFieldEnum[]
+    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
   }
 
   /**
-   * Record findMany
+   * equipment findMany
    */
-  export type RecordFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * Filter, which Records to fetch.
+     * Filter, which equipment to fetch.
      */
-    where?: RecordWhereInput
+    where?: equipmentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Records to fetch.
+     * Determine the order of equipment to fetch.
      */
-    orderBy?: RecordOrderByWithRelationInput | RecordOrderByWithRelationInput[]
+    orderBy?: equipmentOrderByWithRelationInput | equipmentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Records.
+     * Sets the position for listing equipment.
      */
-    cursor?: RecordWhereUniqueInput
+    cursor?: equipmentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Records from the position of the cursor.
+     * Take `±n` equipment from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Records.
+     * Skip the first `n` equipment.
      */
     skip?: number
-    distinct?: RecordScalarFieldEnum | RecordScalarFieldEnum[]
+    distinct?: EquipmentScalarFieldEnum | EquipmentScalarFieldEnum[]
   }
 
   /**
-   * Record create
+   * equipment create
    */
-  export type RecordCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * The data needed to create a Record.
+     * The data needed to create a equipment.
      */
-    data: XOR<RecordCreateInput, RecordUncheckedCreateInput>
+    data?: XOR<equipmentCreateInput, equipmentUncheckedCreateInput>
   }
 
   /**
-   * Record createMany
+   * equipment createMany
    */
-  export type RecordCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Records.
+     * The data used to create many equipment.
      */
-    data: RecordCreateManyInput | RecordCreateManyInput[]
+    data: equipmentCreateManyInput | equipmentCreateManyInput[]
   }
 
   /**
-   * Record update
+   * equipment update
    */
-  export type RecordUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * The data needed to update a Record.
+     * The data needed to update a equipment.
      */
-    data: XOR<RecordUpdateInput, RecordUncheckedUpdateInput>
+    data: XOR<equipmentUpdateInput, equipmentUncheckedUpdateInput>
     /**
-     * Choose, which Record to update.
+     * Choose, which equipment to update.
      */
-    where: RecordWhereUniqueInput
+    where: equipmentWhereUniqueInput
   }
 
   /**
-   * Record updateMany
+   * equipment updateMany
    */
-  export type RecordUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Records.
+     * The data used to update equipment.
      */
-    data: XOR<RecordUpdateManyMutationInput, RecordUncheckedUpdateManyInput>
+    data: XOR<equipmentUpdateManyMutationInput, equipmentUncheckedUpdateManyInput>
     /**
-     * Filter which Records to update
+     * Filter which equipment to update
      */
-    where?: RecordWhereInput
+    where?: equipmentWhereInput
     /**
-     * Limit how many Records to update.
+     * Limit how many equipment to update.
      */
     limit?: number
   }
 
   /**
-   * Record upsert
+   * equipment upsert
    */
-  export type RecordUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * The filter to search for the Record to update in case it exists.
+     * The filter to search for the equipment to update in case it exists.
      */
-    where: RecordWhereUniqueInput
+    where: equipmentWhereUniqueInput
     /**
-     * In case the Record found by the `where` argument doesn't exist, create a new Record with this data.
+     * In case the equipment found by the `where` argument doesn't exist, create a new equipment with this data.
      */
-    create: XOR<RecordCreateInput, RecordUncheckedCreateInput>
+    create: XOR<equipmentCreateInput, equipmentUncheckedCreateInput>
     /**
-     * In case the Record was found with the provided `where` argument, update it with this data.
+     * In case the equipment was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<RecordUpdateInput, RecordUncheckedUpdateInput>
+    update: XOR<equipmentUpdateInput, equipmentUncheckedUpdateInput>
   }
 
   /**
-   * Record delete
+   * equipment delete
    */
-  export type RecordDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
     /**
-     * Filter which Record to delete.
+     * Filter which equipment to delete.
      */
-    where: RecordWhereUniqueInput
+    where: equipmentWhereUniqueInput
   }
 
   /**
-   * Record deleteMany
+   * equipment deleteMany
    */
-  export type RecordDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Records to delete
+     * Filter which equipment to delete
      */
-    where?: RecordWhereInput
+    where?: equipmentWhereInput
     /**
-     * Limit how many Records to delete.
+     * Limit how many equipment to delete.
      */
     limit?: number
   }
 
   /**
-   * Record without action
+   * equipment without action
    */
-  export type RecordDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type equipmentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Record
+     * Select specific fields to fetch from the equipment
      */
-    select?: RecordSelect<ExtArgs> | null
+    select?: equipmentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Record
+     * Omit specific fields from the equipment
      */
-    omit?: RecordOmit<ExtArgs> | null
+    omit?: equipmentOmit<ExtArgs> | null
   }
 
 
@@ -1758,12 +1791,15 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const RecordScalarFieldEnum: {
-    id: 'id',
-    name: 'name'
+  export const EquipmentScalarFieldEnum: {
+    sl: 'sl',
+    name: 'name',
+    category: 'category',
+    barcode: 'barcode',
+    location: 'location'
   };
 
-  export type RecordScalarFieldEnum = (typeof RecordScalarFieldEnum)[keyof typeof RecordScalarFieldEnum]
+  export type EquipmentScalarFieldEnum = (typeof EquipmentScalarFieldEnum)[keyof typeof EquipmentScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -1772,6 +1808,14 @@ export namespace Prisma {
   };
 
   export type SortOrder = (typeof SortOrder)[keyof typeof SortOrder]
+
+
+  export const NullsOrder: {
+    first: 'first',
+    last: 'last'
+  };
+
+  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -1803,74 +1847,110 @@ export namespace Prisma {
    */
 
 
-  export type RecordWhereInput = {
-    AND?: RecordWhereInput | RecordWhereInput[]
-    OR?: RecordWhereInput[]
-    NOT?: RecordWhereInput | RecordWhereInput[]
-    id?: IntFilter<"Record"> | number
-    name?: StringFilter<"Record"> | string
+  export type equipmentWhereInput = {
+    AND?: equipmentWhereInput | equipmentWhereInput[]
+    OR?: equipmentWhereInput[]
+    NOT?: equipmentWhereInput | equipmentWhereInput[]
+    sl?: IntFilter<"equipment"> | number
+    name?: StringNullableFilter<"equipment"> | string | null
+    category?: StringNullableFilter<"equipment"> | string | null
+    barcode?: StringNullableFilter<"equipment"> | string | null
+    location?: StringNullableFilter<"equipment"> | string | null
   }
 
-  export type RecordOrderByWithRelationInput = {
-    id?: SortOrder
-    name?: SortOrder
+  export type equipmentOrderByWithRelationInput = {
+    sl?: SortOrder
+    name?: SortOrderInput | SortOrder
+    category?: SortOrderInput | SortOrder
+    barcode?: SortOrderInput | SortOrder
+    location?: SortOrderInput | SortOrder
   }
 
-  export type RecordWhereUniqueInput = Prisma.AtLeast<{
-    id?: number
-    AND?: RecordWhereInput | RecordWhereInput[]
-    OR?: RecordWhereInput[]
-    NOT?: RecordWhereInput | RecordWhereInput[]
-    name?: StringFilter<"Record"> | string
-  }, "id">
+  export type equipmentWhereUniqueInput = Prisma.AtLeast<{
+    sl?: number
+    barcode?: string
+    AND?: equipmentWhereInput | equipmentWhereInput[]
+    OR?: equipmentWhereInput[]
+    NOT?: equipmentWhereInput | equipmentWhereInput[]
+    name?: StringNullableFilter<"equipment"> | string | null
+    category?: StringNullableFilter<"equipment"> | string | null
+    location?: StringNullableFilter<"equipment"> | string | null
+  }, "sl" | "barcode">
 
-  export type RecordOrderByWithAggregationInput = {
-    id?: SortOrder
-    name?: SortOrder
-    _count?: RecordCountOrderByAggregateInput
-    _avg?: RecordAvgOrderByAggregateInput
-    _max?: RecordMaxOrderByAggregateInput
-    _min?: RecordMinOrderByAggregateInput
-    _sum?: RecordSumOrderByAggregateInput
+  export type equipmentOrderByWithAggregationInput = {
+    sl?: SortOrder
+    name?: SortOrderInput | SortOrder
+    category?: SortOrderInput | SortOrder
+    barcode?: SortOrderInput | SortOrder
+    location?: SortOrderInput | SortOrder
+    _count?: equipmentCountOrderByAggregateInput
+    _avg?: equipmentAvgOrderByAggregateInput
+    _max?: equipmentMaxOrderByAggregateInput
+    _min?: equipmentMinOrderByAggregateInput
+    _sum?: equipmentSumOrderByAggregateInput
   }
 
-  export type RecordScalarWhereWithAggregatesInput = {
-    AND?: RecordScalarWhereWithAggregatesInput | RecordScalarWhereWithAggregatesInput[]
-    OR?: RecordScalarWhereWithAggregatesInput[]
-    NOT?: RecordScalarWhereWithAggregatesInput | RecordScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Record"> | number
-    name?: StringWithAggregatesFilter<"Record"> | string
+  export type equipmentScalarWhereWithAggregatesInput = {
+    AND?: equipmentScalarWhereWithAggregatesInput | equipmentScalarWhereWithAggregatesInput[]
+    OR?: equipmentScalarWhereWithAggregatesInput[]
+    NOT?: equipmentScalarWhereWithAggregatesInput | equipmentScalarWhereWithAggregatesInput[]
+    sl?: IntWithAggregatesFilter<"equipment"> | number
+    name?: StringNullableWithAggregatesFilter<"equipment"> | string | null
+    category?: StringNullableWithAggregatesFilter<"equipment"> | string | null
+    barcode?: StringNullableWithAggregatesFilter<"equipment"> | string | null
+    location?: StringNullableWithAggregatesFilter<"equipment"> | string | null
   }
 
-  export type RecordCreateInput = {
-    name: string
+  export type equipmentCreateInput = {
+    name?: string | null
+    category?: string | null
+    barcode?: string | null
+    location?: string | null
   }
 
-  export type RecordUncheckedCreateInput = {
-    id?: number
-    name: string
+  export type equipmentUncheckedCreateInput = {
+    sl?: number
+    name?: string | null
+    category?: string | null
+    barcode?: string | null
+    location?: string | null
   }
 
-  export type RecordUpdateInput = {
-    name?: StringFieldUpdateOperationsInput | string
+  export type equipmentUpdateInput = {
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    barcode?: NullableStringFieldUpdateOperationsInput | string | null
+    location?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type RecordUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
+  export type equipmentUncheckedUpdateInput = {
+    sl?: IntFieldUpdateOperationsInput | number
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    barcode?: NullableStringFieldUpdateOperationsInput | string | null
+    location?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type RecordCreateManyInput = {
-    name: string
+  export type equipmentCreateManyInput = {
+    name?: string | null
+    category?: string | null
+    barcode?: string | null
+    location?: string | null
   }
 
-  export type RecordUpdateManyMutationInput = {
-    name?: StringFieldUpdateOperationsInput | string
+  export type equipmentUpdateManyMutationInput = {
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    barcode?: NullableStringFieldUpdateOperationsInput | string | null
+    location?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type RecordUncheckedUpdateManyInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    name?: StringFieldUpdateOperationsInput | string
+  export type equipmentUncheckedUpdateManyInput = {
+    sl?: IntFieldUpdateOperationsInput | number
+    name?: NullableStringFieldUpdateOperationsInput | string | null
+    category?: NullableStringFieldUpdateOperationsInput | string | null
+    barcode?: NullableStringFieldUpdateOperationsInput | string | null
+    location?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -1884,10 +1964,10 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type StringFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
+  export type StringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | null
+    notIn?: string[] | null
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -1895,30 +1975,44 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringFilter<$PrismaModel> | string
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
-  export type RecordCountOrderByAggregateInput = {
-    id?: SortOrder
+  export type SortOrderInput = {
+    sort: SortOrder
+    nulls?: NullsOrder
+  }
+
+  export type equipmentCountOrderByAggregateInput = {
+    sl?: SortOrder
     name?: SortOrder
+    category?: SortOrder
+    barcode?: SortOrder
+    location?: SortOrder
   }
 
-  export type RecordAvgOrderByAggregateInput = {
-    id?: SortOrder
+  export type equipmentAvgOrderByAggregateInput = {
+    sl?: SortOrder
   }
 
-  export type RecordMaxOrderByAggregateInput = {
-    id?: SortOrder
+  export type equipmentMaxOrderByAggregateInput = {
+    sl?: SortOrder
     name?: SortOrder
+    category?: SortOrder
+    barcode?: SortOrder
+    location?: SortOrder
   }
 
-  export type RecordMinOrderByAggregateInput = {
-    id?: SortOrder
+  export type equipmentMinOrderByAggregateInput = {
+    sl?: SortOrder
     name?: SortOrder
+    category?: SortOrder
+    barcode?: SortOrder
+    location?: SortOrder
   }
 
-  export type RecordSumOrderByAggregateInput = {
-    id?: SortOrder
+  export type equipmentSumOrderByAggregateInput = {
+    sl?: SortOrder
   }
 
   export type IntWithAggregatesFilter<$PrismaModel = never> = {
@@ -1937,10 +2031,10 @@ export namespace Prisma {
     _max?: NestedIntFilter<$PrismaModel>
   }
 
-  export type StringWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
+  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | null
+    notIn?: string[] | null
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -1948,14 +2042,14 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedStringFilter<$PrismaModel>
-    _max?: NestedStringFilter<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
   }
 
-  export type StringFieldUpdateOperationsInput = {
-    set?: string
+  export type NullableStringFieldUpdateOperationsInput = {
+    set?: string | null
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -1977,10 +2071,10 @@ export namespace Prisma {
     not?: NestedIntFilter<$PrismaModel> | number
   }
 
-  export type NestedStringFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
+  export type NestedStringNullableFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | null
+    notIn?: string[] | null
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -1988,7 +2082,7 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringFilter<$PrismaModel> | string
+    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
@@ -2018,10 +2112,10 @@ export namespace Prisma {
     not?: NestedFloatFilter<$PrismaModel> | number
   }
 
-  export type NestedStringWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel>
-    in?: string[]
-    notIn?: string[]
+  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: string | StringFieldRefInput<$PrismaModel> | null
+    in?: string[] | null
+    notIn?: string[] | null
     lt?: string | StringFieldRefInput<$PrismaModel>
     lte?: string | StringFieldRefInput<$PrismaModel>
     gt?: string | StringFieldRefInput<$PrismaModel>
@@ -2029,10 +2123,21 @@ export namespace Prisma {
     contains?: string | StringFieldRefInput<$PrismaModel>
     startsWith?: string | StringFieldRefInput<$PrismaModel>
     endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringWithAggregatesFilter<$PrismaModel> | string
-    _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedStringFilter<$PrismaModel>
-    _max?: NestedStringFilter<$PrismaModel>
+    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
+    _count?: NestedIntNullableFilter<$PrismaModel>
+    _min?: NestedStringNullableFilter<$PrismaModel>
+    _max?: NestedStringNullableFilter<$PrismaModel>
+  }
+
+  export type NestedIntNullableFilter<$PrismaModel = never> = {
+    equals?: number | IntFieldRefInput<$PrismaModel> | null
+    in?: number[] | null
+    notIn?: number[] | null
+    lt?: number | IntFieldRefInput<$PrismaModel>
+    lte?: number | IntFieldRefInput<$PrismaModel>
+    gt?: number | IntFieldRefInput<$PrismaModel>
+    gte?: number | IntFieldRefInput<$PrismaModel>
+    not?: NestedIntNullableFilter<$PrismaModel> | number | null
   }
 
 

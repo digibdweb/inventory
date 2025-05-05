@@ -93,9 +93,12 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Snapshot: 'Snapshot'
 });
 
-exports.Prisma.RecordScalarFieldEnum = {
-  id: 'id',
-  name: 'name'
+exports.Prisma.EquipmentScalarFieldEnum = {
+  sl: 'sl',
+  name: 'name',
+  category: 'category',
+  barcode: 'barcode',
+  location: 'location'
 };
 
 exports.Prisma.SortOrder = {
@@ -103,9 +106,14 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  Record: 'Record'
+  equipment: 'equipment'
 };
 /**
  * Create the Client
@@ -118,7 +126,7 @@ const config = {
       "value": "prisma-client-js"
     },
     "output": {
-      "value": "C:\\NEXTJS\\inventory\\src\\generated\\prisma",
+      "value": "C:\\NEXTJS\\inventory\\src\\app\\lib\\generated\\prisma",
       "fromEnvVar": null
     },
     "config": {
@@ -136,31 +144,32 @@ const config = {
     "isCustomOutput": true
   },
   "relativeEnvPaths": {
-    "rootEnvPath": "../../../.env",
-    "schemaEnvPath": "../../../.env"
+    "rootEnvPath": null,
+    "schemaEnvPath": "../../../../../.env"
   },
-  "relativePath": "../../../prisma",
+  "relativePath": "../../../../../prisma",
   "clientVersion": "6.7.0",
   "engineVersion": "3cff47a7f5d65c3ea74883f1d736e41d68ce91ed",
   "datasourceNames": [
     "db"
   ],
   "activeProvider": "sqlserver",
+  "postinstall": false,
   "inlineDatasources": {
     "db": {
       "url": {
         "fromEnvVar": "DATABASE_URL",
-        "value": "sqlserver://localhost:1433;database=test;user=sa;password=sa;trustServerCertificate=true"
+        "value": null
       }
     }
   },
-  "inlineSchema": "// This is your Prisma schema file,\n// learn more about it in the docs: https://pris.ly/d/prisma-schema\n\n// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?\n// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init\n\ngenerator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"sqlserver\"\n  url      = env(\"DATABASE_URL\")\n}\n\nmodel Record {\n  id   Int    @id @default(autoincrement())\n  name String\n}\n",
-  "inlineSchemaHash": "85438207494feff9ab89b567f4d0189100e99a59a2b2603cdf0e5d1229d85d72",
+  "inlineSchema": "generator client {\n  provider = \"prisma-client-js\"\n  output   = \"../src/app/lib/generated/prisma\"\n}\n\ndatasource db {\n  provider = \"sqlserver\"\n  url      = env(\"DATABASE_URL\")\n}\n\n/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.\nmodel Device_RAW_File {\n  NetBios_Name     String? @db.NVarChar(15)\n  Client_Staus     String? @db.NVarChar(8)\n  Manufacturer     String? @db.NVarChar(34)\n  Model            String? @db.NVarChar(48)\n  Processor        String? @db.NVarChar(47)\n  Bios_Serial      String? @db.NVarChar(54)\n  OS_Name          String? @db.NVarChar(84)\n  OS_Build_Versoin Int?\n  OS_BIT           String? @db.NVarChar(12)\n  Last_Logon_Date  String? @db.NVarChar(22)\n  User_Name        String? @db.NVarChar(19)\n  MAC_Address      String? @db.NVarChar(80)\n  Memory           Int?\n  Disk_Drive       Int?\n  IP_Address       String? @db.NVarChar(133)\n\n  @@ignore\n}\n\nmodel equipment {\n  sl       Int     @id(map: \"PK__equipmen__3214186AFDC739FF\") @default(autoincrement())\n  name     String? @db.NVarChar(100)\n  category String? @db.NVarChar(100)\n  barcode  String? @unique(map: \"UQ__equipmen__C16E36F8E848ED1B\") @db.NVarChar(50)\n  location String? @db.NVarChar(100)\n}\n\n/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.\nmodel IPLIST {\n  S_L         Int?\n  SI          Int?\n  Branch_Name String? @db.NVarChar(29)\n  Code        Int?\n  IP_Address  String? @db.NVarChar(18)\n  Type        String? @db.NVarChar(16)\n\n  @@ignore\n}\n",
+  "inlineSchemaHash": "6e6218f5ddd0572058d90f38725fe5fc7a7efed46673243c662270aa48f83add",
   "copyEngine": true
 }
 config.dirname = '/'
 
-config.runtimeDataModel = JSON.parse("{\"models\":{\"Record\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"id\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"Int\",\"nativeType\":null,\"default\":{\"name\":\"autoincrement\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"name\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":null,\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}")
+config.runtimeDataModel = JSON.parse("{\"models\":{\"equipment\":{\"dbName\":null,\"schema\":null,\"fields\":[{\"name\":\"sl\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":true,\"isUnique\":false,\"isId\":true,\"isReadOnly\":false,\"hasDefaultValue\":true,\"type\":\"Int\",\"nativeType\":null,\"default\":{\"name\":\"autoincrement\",\"args\":[]},\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"name\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"NVarChar\",[\"100\"]],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"category\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"NVarChar\",[\"100\"]],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"barcode\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":true,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"NVarChar\",[\"50\"]],\"isGenerated\":false,\"isUpdatedAt\":false},{\"name\":\"location\",\"kind\":\"scalar\",\"isList\":false,\"isRequired\":false,\"isUnique\":false,\"isId\":false,\"isReadOnly\":false,\"hasDefaultValue\":false,\"type\":\"String\",\"nativeType\":[\"NVarChar\",[\"100\"]],\"isGenerated\":false,\"isUpdatedAt\":false}],\"primaryKey\":null,\"uniqueFields\":[],\"uniqueIndexes\":[],\"isGenerated\":false}},\"enums\":{},\"types\":{}}")
 defineDmmfProperty(exports.Prisma, config.runtimeDataModel)
 config.engineWasm = undefined
 config.compilerWasm = undefined

@@ -121,9 +121,12 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Snapshot: 'Snapshot'
 });
 
-exports.Prisma.RecordScalarFieldEnum = {
-  id: 'id',
-  name: 'name'
+exports.Prisma.EquipmentScalarFieldEnum = {
+  sl: 'sl',
+  name: 'name',
+  category: 'category',
+  barcode: 'barcode',
+  location: 'location'
 };
 
 exports.Prisma.SortOrder = {
@@ -131,9 +134,14 @@ exports.Prisma.SortOrder = {
   desc: 'desc'
 };
 
+exports.Prisma.NullsOrder = {
+  first: 'first',
+  last: 'last'
+};
+
 
 exports.Prisma.ModelName = {
-  Record: 'Record'
+  equipment: 'equipment'
 };
 
 /**
