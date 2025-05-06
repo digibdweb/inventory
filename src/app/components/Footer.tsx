@@ -5,9 +5,9 @@ export default function Footer() {
       <footer className="w-full border-t fixed left-0 bottom-0">
         
 
-        <div className="grid grid-cols-5 bg-[#008F4C] ">
-          <div className="col-span-3 bg-[#0E3B64] text-white "> <p className="px-4  py-5"><span>© {new Date().getFullYear()} Asset Tracker. All rights reserved.</span></p></div>
-          <div className="col-span-1   py-8 bg-pbl-green w-[84px] h-[71px] relative">
+        <div className="grid grid-cols-5 bg-[#008F4C] text-xs ">
+          <div className="col-span-3 bg-[#0E3B64] text-white "> <p className="px-4  py-4"><span>© The Premier Bank PLC. {new Date().getFullYear()} Asset Tracker. All rights reserved. </span></p></div>
+          <div className="col-span-1   py-4 bg-pbl-green w-[67px] h-[56px] relative">
           <Image
             src="/logo_footer.png" // path to your image in the public folder
             alt="Footer logo"

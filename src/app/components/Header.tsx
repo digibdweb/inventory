@@ -1,10 +1,11 @@
 // components/Header.tsx
+import Navbar from "./Navbar";
 export default function Header() {
     return (
       <header className="fixed w-full border-b bg-linear-to-r from-blue-900 to-green-600 text-white">
         <div className="mx-auto max-w-7xl px-4 py-4 flex items-center justify-between">
           <div className="text-xl font-bold"><a href="/barcode">Asset Tracker</a></div>
-          <nav className="space-x-6 ">
+          {/* <nav className="space-x-6 ">
             <a href="/" className="">
               Home
             </a>
@@ -20,7 +21,8 @@ export default function Header() {
             <a href="/contact" className="">
               Contact
             </a>
-          </nav>
+          </nav> */}
+          <Navbar></Navbar>
         </div>
       </header>
     );
